@@ -1,13 +1,13 @@
 import { FC, useEffect, useState } from 'react'
 import { Line, LineChart, Tooltip, XAxis, YAxis } from 'recharts'
 
-type Prices = {
+type PriceData = {
     date: String,
     price: Number
 }
 
-const generateData = (): Array<Prices> => {
-    let res: Array<Prices> = []
+const generateData = (): Array<PriceData> => {
+    let res: Array<PriceData> = []
 
     for (let i = 0; i < 10; i++) {
         let num = Math.floor(Math.random() * (300000 - 100000) + 100000)
@@ -21,7 +21,7 @@ const generateData = (): Array<Prices> => {
     return res
 }
 
-export const useIsServerSide = () => {
+export const useIsServerSide = (): boolean => {
     const [isServerSide, setIsServerSide] = useState(true)
 
     useEffect(() => {
