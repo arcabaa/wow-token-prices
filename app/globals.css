@@ -74,3 +74,9 @@
     @apply bg-background text-foreground;
   }
 }
+
+.custom-tooltip {
+  background-color: #262b37;
+  color: #f1f6ff;
+  padding: 10px 10px;
+}
